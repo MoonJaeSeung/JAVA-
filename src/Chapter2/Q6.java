@@ -1,9 +1,9 @@
-// 연습2-6
+package Chapter2;// 연습2-6
 // 입력 받은 10진 정수를 2진수 ~ 36진수로 기수 변환하여 출력(변환 과정을 출력)
 
 import java.util.Scanner;
 
-class CardConvEx {
+class Q6 {
 
     //--- 정숫값 x를 r 진수로 변환하여 배열 d에 아랫자리부터 저장하고 자릿수를 반환 ---//
     static int cardConvEx(int x, int r, char[] d) {
@@ -13,7 +13,7 @@ class CardConvEx {
 
         System.out.printf(String.format("%%2d | %%%dd\n", n), r, x);
         do {
-//            System.out.printf("   +");
+            System.out.printf("   +");
             for (int i = 0; i < n + 2; i++)
                 System.out.print('-');
             System.out.println();
