@@ -1,20 +1,18 @@
-// 연습3-3
-// 특정 값을 갖는 배열 안의 모든 요소를 다른 배열에 copy
+package Chapter3;
 
 import java.util.Scanner;
 
-class SearchIndex {
+public class Q3 {
 
-    //--- 배열 a의 앞쪽 n개의 요소에서 key와 일치하는 모든 요소의 인덱스를  ---//
-    //--- 배열 idx의 앞쪽부터 순서대로 저장하고 일치하는 요솟수를 반환합니다 ---//
-    static int searchIdx(int[] a, int n, int key, int[] idx) {
-        int count = 0;								// key와 일치하는 요솟수
-        for (int i = 0; i < n; i++)
-            if (a[i] == key)
-                idx[count++] = i;
+    static int searchIdx(int[] x,int num, int ky, int[] y){
+        int count = 0;
+        for(int i=0;i<num;i++){
+            if(x[i]==ky){
+                y[count++]=i;
+            }
+        }
         return count;
     }
-
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
@@ -39,4 +37,3 @@ class SearchIndex {
                 System.out.println("그 값은 " + "x[" + y[i] + "]에 있습니다.");
     }
 }
-
