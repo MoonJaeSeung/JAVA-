@@ -1,24 +1,20 @@
-// 이진 검색
+package Chapter3;
 
 import java.util.Scanner;
 
-class BinSearch {
-    //--- 요솟수가 n개인 배열 a에서 key와 같은 요소를 이진 검색 ---//
+public class Code3_4 {
+
     static int binSearch(int[] a, int n, int key) {
-        int pl = 0;            // 검색 범위의 첫 인덱스
-        int pr = n - 1;        // 검색 범위의 끝 인덱스
+        int p1=0;
+        int p2=n-1;
 
-        do {
-            int pc = (pl + pr) / 2;     // 중앙 요소 인덱스
-            if (a[pc] == key)
-                return pc;              // 검색 성공!
-            else if (a[pc] < key)
-                pl = pc + 1;            // 검색 범위를 뒤쪽 절반으로 좁힘
-            else
-                pr = pc - 1;            // 검색 범위를 앞쪽 절반으로 좁힘
-        } while (pl <= pr);
-
-        return -1;                      // 검색 실패
+        do{
+            int pc=(p1+p2)/2;
+            if(a[pc]==key) return pc;
+                else if(a[pc]>key) p2 = pc-1;
+                else if(a[pc]<key) p1=pc+1;
+        }while(p1<=p2);
+        return -1;
     }
 
     public static void main(String[] args) {
