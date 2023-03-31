@@ -46,7 +46,7 @@ public class IntArrayQueue {
         return x;
     }
     //큐에서 데이터를 피크(맨 앞 데이터를 들여다봄)
-    public int peek() throws IntArrayQueue_.EmptyIntArrayQueueException {
+    public int peek() throws EmptyIntArrayQueueException {
         if(num<=0) throw new EmptyIntArrayQueueException();
         return que[num-1];
     }
